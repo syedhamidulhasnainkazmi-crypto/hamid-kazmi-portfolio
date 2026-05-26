@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to Email Newsletter | Free SaaS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-purple-600 to-blue-500 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-white mb-2">📧 Markdown to Email Newsletter</h1>
+            <p class="text-white opacity-90">Write in Markdown → Get HTML email ready</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Left: Input -->
+            <div class="bg-white rounded-xl shadow-2xl p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-semibold text-gray-800">✍️ Markdown Input</h2>
+                    <div class="space-x-2">
+                        <button id="copyBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition">📋 Copy HTML</button>
+                        <button id="resetBtn" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition">🔄 Reset</button>
+                    </div>
+                </div>
+                <textarea id="markdownInput" rows="20" class="w-full border border-gray-300 rounded-lg p-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="# Hello Newsletter!
+
+This is **bold** and *italic*
+
+- Bullet point 1
+- Bullet point 2
+
+[Click here](https://example.com)"></textarea>
+            </div>
+
+            <!-- Right: Preview -->
+            <div class="bg-white rounded-xl shadow-2xl p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">👀 Live Preview</h2>
+                <div id="preview" class="prose max-w-none border border-gray-200 rounded-lg p-4 min-h-[500px] bg-gray-50 overflow-auto"></div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8 text-white text-sm opacity-75">
+            💾 Your draft saves automatically
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
